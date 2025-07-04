@@ -1,0 +1,6 @@
+@font-face {
+  font-family: Dyna;
+  src: url(../src/assets/fonts/DynaPuff-VariableFont_wdth\,wght.ttf);
+}
+
+@import "tailwindcss";
