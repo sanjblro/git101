@@ -3,4 +3,9 @@
   src: url(../src/assets/fonts/DynaPuff-VariableFont_wdth\,wght.ttf);
 }
 
+@font-face {
+  font-family: Mali;
+  src: url(../src/assets/fonts/Mali-Medium.ttf);
+}
+
 @import "tailwindcss";

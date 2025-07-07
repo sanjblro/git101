@@ -1,11 +1,21 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 function About() {
   const [age, setAge] = useState('');
+  const navigate = useNavigate();
+
+  const handleSubmit = () => {
+    if (age) {
+      navigate('/story');
+    } else {
+      alert('Please enter your age!');
+    }
+  };
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen text-xl">
-      <p className="mb-4">How old are you?</p>
+    <div className="flex flex-col items-center justify-center min-h-screen font-[Mali]">
+      <p className="mb-4 text-4xl">How old are you?</p>
 
       <input
         type="number"
@@ -14,6 +24,12 @@ function About() {
         placeholder="Enter your age"
         className="p-2 border border-black rounded-full w-60 text-center"
       />
+       <button
+        onClick={handleSubmit}
+        className="p-2 border w-40 rounded-full text-center mt-5 bg-purple-200"
+      >
+        NEXT
+      </button>
     </div>
   );
 }
