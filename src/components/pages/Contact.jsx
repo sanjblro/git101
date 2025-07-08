@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { ArrowLeft } from 'lucide-react'; // ใช้ icon จาก lucide-react หรือเปลี่ยนเป็นไฟล์รูปก็ได้
 
 const Setting = () => {
   const navigate = useNavigate();
