@@ -9,7 +9,7 @@ const Home = ({ onStart }) => {
 
 
       <img src="/image/logo.PNG" alt="logo" className="w-200 h-auto relative z-10 mb-6" />
-      <img src="/image/phone.PNG" alt="phone" className='absolute w-270 z-0 bottom-0 left-1/4' />
+      <img src="/image/phone.PNG" alt="phone" className='absolute w-270 z-0 bottom-0 left-1/3' />
 
       <Link
         to="/about"
