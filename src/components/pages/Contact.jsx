@@ -6,22 +6,22 @@ const Setting = () => {
   const [volume, setVolume] = useState(50);
 
   return (
-    <div className="relative min-h-screen w-full bg-yellow-100 flex flex-col items-center justify-center">
+    <div className="relative w-full bg-yellow-100 flex flex-col items-center justify-center min-h-screen font-[Mali]">
 
       <button
         onClick={() => navigate(-1)}
-        className="absolute top-50 left-116 rounded-full p-2"
+        className="absolute top-20 left-50 rounded-full p-2"
       >
         <img src="/image/back-button.png" className="w-14 h-14 cursor-pointer" />
       </button>
 
 
-      <div className="bg-white rounded-full px-20 py-5 text-2xl font-[Dyna] mb-15 mt-12">
+      <div className="top-20 text-6xl font-[Mali] absolute">
         SETTING
       </div>
 
 
-      <div className="flex items-center w-full max-w-md mb-8 ">
+      <div className="flex items-center w-full max-w-md mt-20 ">
         <img src="/image/sound.png" alt="volume" className="w-8 h-8 mr-4" />
         <input
           type="range"
@@ -34,16 +34,16 @@ const Setting = () => {
       </div>
 
 
-      <button className="bg-gray-400 rounded-full px-20 py-5 text-white text-xl font-[Dyna] mb-15 mt-10 cursor-pointer">
+      <button className="bg-gray-600 rounded-full w-80 h-20 text-white text-4xl mt-20 cursor-pointer">
         LANGUAGE
       </button>
 
 
-      <div className="flex gap-6 ">
-        <button className="bg-blue-700 rounded-full px-20 py-5 text-white text-xl font-[Dyna] cursor-pointer">
+      <div className="flex gap-50 mt-20 ">
+        <button className="bg-sky-700 rounded-full w-80 h-20 text-white text-4xl cursor-pointer">
           DARK MODE
         </button>
-        <button className="bg-yellow-300 rounded-full px-20 py-5 text-black text-xl font-[Dyna] cursor-pointer">
+        <button className="bg-yellow-200 rounded-full px-20 py-5 text-black text-4xl cursor-pointer">
           LIGHT MODE
         </button>
       </div>
