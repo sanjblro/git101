@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 const Setting = () => {
   const navigate = useNavigate();
   const [volume, setVolume] = useState(50);
+  const [isLanguageModalOpen, setIsLanguageModalOpen] = useState(false);
 
   return (
     <div className="relative w-full bg-yellow-100 flex flex-col items-center justify-center min-h-screen font-[Mali]">
@@ -15,11 +16,9 @@ const Setting = () => {
         <img src="/image/back-button.png" className="w-14 h-14 cursor-pointer" />
       </button>
 
-
       <div className="top-20 text-6xl font-[Mali] absolute">
         SETTING
       </div>
-
 
       <div className="flex items-center w-full max-w-md mt-20 ">
         <img src="/image/sound.png" alt="volume" className="w-8 h-8 mr-4" />
@@ -33,13 +32,34 @@ const Setting = () => {
         />
       </div>
 
-
-      <button className="bg-gray-600 rounded-full w-80 h-20 text-white text-4xl mt-20 cursor-pointer">
+  
+      <button
+        className="bg-gray-600 rounded-full w-80 h-20 text-white text-4xl mt-20 cursor-pointer"
+        onClick={() => setIsLanguageModalOpen(true)} 
+      >
         LANGUAGE
       </button>
 
+      {isLanguageModalOpen && (
+        <div className="fixed inset-0 bg-opacity-50 flex items-center justify-center z-50">
+          <div className="bg-gray-200 p-10 rounded-xl shadow-lg w-96 text-center relative">
+            <h2 className="text-2xl font-bold mb-4">เปลี่ยนภาษา</h2>
+            <button
+              className="absolute top-2 right-4 text-xl text-gray-600 hover:text-black"
+              onClick={() => setIsLanguageModalOpen(false)}
+            >
+              ✕
+            </button>
+            <div className="space-y-4 mt-4">
+              <button className="w-full py-2 bg-sky-700 text-white rounded">ไทย</button>
+              <button className="w-full py-2 bg-sky-700 text-white rounded">English</button>
+            </div>
+          </div>
+        </div>
+      )}
 
-      <div className="flex gap-50 mt-20 ">
+      {/* ปุ่มโหมด */}
+      <div className="flex gap-10 mt-20">
         <button className="bg-sky-700 rounded-full w-80 h-20 text-white text-4xl cursor-pointer">
           DARK MODE
         </button>

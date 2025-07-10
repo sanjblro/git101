@@ -1,10 +1,17 @@
 import { useParams } from 'react-router-dom';
 
 const stageData = {
-  1: { title: "ตอนที่ 1", content: "เนื้อหาของตอนที่ 1" },
-  2: { title: "ตอนที่ 2", content: "เนื้อหาของตอนที่ 2" },
-  3: { title: "ตอนที่ 3", content: "เนื้อหาของตอนที่ 3" },
-  4: { title: "ตอนที่ 4", content: "เนื้อหาของตอนที่ 4" },
+  1: { title: "ตอนที่ 1", 
+    content: "เนื้อหาของตอนที่ 1" },
+
+  2: { title: "ตอนที่ 2", 
+    content: "เนื้อหาของตอนที่ 2" },
+
+  3: { title: "ตอนที่ 3", 
+    content: "เนื้อหาของตอนที่ 3" },
+    
+  4: { title: "ตอนที่ 4", 
+    content: "เนื้อหาของตอนที่ 4" },
 };
 
 function StatePage() {
