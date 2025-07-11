@@ -45,20 +45,19 @@ const Setting = () => {
           <div className="bg-gray-200 p-10 rounded-xl shadow-lg w-96 text-center relative">
             <h2 className="text-2xl font-bold mb-4">เปลี่ยนภาษา</h2>
             <button
-              className="absolute top-2 right-4 text-xl text-gray-600 hover:text-black"
+              className="absolute top-2 right-4 text-xl text-gray-600 hover:text-black cursor-pointer"
               onClick={() => setIsLanguageModalOpen(false)}
             >
               ✕
             </button>
             <div className="space-y-4 mt-4">
-              <button className="w-full py-2 bg-sky-700 text-white rounded">ไทย</button>
-              <button className="w-full py-2 bg-sky-700 text-white rounded">English</button>
+              <button className="w-full py-2 bg-sky-700 text-white rounded cursor-pointer">ไทย</button>
+              <button className="w-full py-2 bg-sky-700 text-white rounded cursor-pointer">English</button>
             </div>
           </div>
         </div>
       )}
 
-      {/* ปุ่มโหมด */}
       <div className="flex gap-10 mt-20">
         <button className="bg-sky-700 rounded-full w-80 h-20 text-white text-4xl cursor-pointer">
           DARK MODE
