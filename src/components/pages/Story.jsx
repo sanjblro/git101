@@ -14,18 +14,20 @@ const rows = [
   ];
 
   return (
-   <div className="text-center p-10">
-      <h2 className='text-2xl text-black font-[Mali] mb-8 mt-10'>เส้นทางแห่งดวงจันทร์</h2>
+   <div className="text-center p-10 bg-cover bg-center min-h-screen"
+   style={{
+    backgroundImage: "url('public/image/brett-ritchie-1vKTnwLMdqs-unsplash.jpg')",
+  }}
+   >
+      <h2 className='text-2xl text-white font-[Mali] mb-8 mt-10'>เส้นทางแห่งดวงจันทร์</h2>
 {rows.map((row, rowIndex) => (
         <div key={rowIndex} className="relative flex justify-center gap-50 mb-8 pt-20">
           {row.map((stageNumber, i) => (
             <div key={stageNumber} className="relative">
-              {i < row.length - 1 && (
-                <div className="absolute top-1/2 left-full h-2 w-50 bg-sky-700 translate-y-[-50%]"></div>
-              )}
+             
               <button
                 onClick={() => handleStageClick(stageNumber)}
-                className="w-20 h-20 rounded-full bg-sky-700 text-white text-2xl font-bold hover:bg-sky-800 hover:scale-110 transition-transform duration-200"
+                className="w-20 h-20 rounded-full bg-sky-800 text-white text-2xl font-bold hover:bg-sky-900 hover:scale-110 transition-transform duration-200"
               >
                 {stageNumber}
               </button>

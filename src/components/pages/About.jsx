@@ -17,7 +17,7 @@ function About() {
     <div className="flex flex-col items-center justify-center min-h-screen font-[Mali]">
       <p className="mb-4 text-4xl">How old are you?</p>
 
-      <input
+      <input  
         type="number"
         value={age}
         onChange={(e) => setAge(e.target.value)}
