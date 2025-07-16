@@ -20,11 +20,19 @@ const Home = ({ onStart }) => {
 
       <Link
         to="/contact"
-        className="w-100 h-auto bg-gray-600 rounded-full p-6 ml-50 mb-3 font-[Dyna] text-white text-center block"
+        className="w-100 h-auto bg-gray-600 rounded-full p-6 ml-50 mb-6 font-[Dyna] text-white text-center block"
       >
         SETTING
       </Link>
+
+      <Link
+        to="/License"
+        className="w-50 h-auto bg-red-200 rounded-full p-6 ml-75 mb-3 font-[Dyna] text-white text-center block"
+      >
+        License
+      </Link>
     </div>
+
   );
 };
 
