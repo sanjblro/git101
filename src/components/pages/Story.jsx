@@ -16,7 +16,7 @@ const rows = [
   return (
    <div className="text-center p-10 bg-cover bg-center min-h-screen"
    style={{
-    backgroundImage: "url('public/image/brett-ritchie-1vKTnwLMdqs-unsplash.jpg')",
+    backgroundImage: `${import.meta.env.BASE_URL}image/brett-ritchie-1vKTnwLMdqs-unsplash.jpg`,
   }}
    >
       <h2 className='text-2xl text-white font-[Mali] mb-8 mt-10'>เส้นทางแห่งดวงจันทร์</h2>
