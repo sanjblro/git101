@@ -13,7 +13,7 @@ const Home = ({ onStart }) => {
 
       <Link
         to="/about"
-        className="w-100 h-auto bg-gray-600 rounded-full p-6 ml-50 mb-6 font-[Mali] text-white text-center block"
+        className="w-100 h-auto bg-gray-600 rounded-full p-6 ml-50 mb-3 font-[Mali] text-white text-center block"
       >
         START
       </Link>
@@ -23,6 +23,13 @@ const Home = ({ onStart }) => {
         className="w-100 h-auto bg-gray-600 rounded-full p-6 ml-50 mb-3 font-[Mali] text-white text-center block"
       >
         SETTING
+      </Link>
+
+      <Link
+        to="/license"
+        className="w-100 h-auto bg-gray-600 rounded-full p-6 ml-50 mb-3 font-[Mali] text-white text-center block"
+      >
+        LICENSE
       </Link>
     </div>
   );
