@@ -4,17 +4,12 @@ import { useNavigate } from 'react-router-dom';
 
 
 function License() {
-<<<<<<< HEAD
 
-=======
- const navigate = useNavigate();
->>>>>>> b854e60fb1a391c06bd101358541288a1b7e0f3f
   return (
 
     
     <div className="flex items-center justify-center min-h-screen bg-yellow-100">
         <button
-<<<<<<< HEAD
         onClick={() => navigate('/Home')}
         className="absolute top-20 left-50 rounded-full p-2"
       >
@@ -24,17 +19,6 @@ function License() {
       <div className="bg-purple-200 p-8 rounded-2xl shadow-lg w-200">
         <h1 className="text-black text-xl font-bold mb-4">ข้อตกลงในการใช้ซอฟต์แวร์</h1>
         <p className="text-gray-700">ซอฟต์แวร์นี้เป็นผลงานที่พัฒนาขึ้นโดย นายกันตินัน ขุนพิลึก นายพชรพล พินิจกิจ และ นางสาวฟ้า จากโรงเรียนราชวินิตบางแก้ว ภายใต้การดูแลของ ....(ชื่ออาจารย์ที่ปรึกษา).... ภายใต้โครงการ ....(ชื่อโครงการ).... ซึ่งได้รับการสนับสนุนโดยสำนักงานพัฒนาวิทยาศาสตร์และเทคโนโลยีแห่งชาติ (สวทช.)
-=======
-        onClick={() => navigate('/')}
-        className="absolute top-20 left-50 rounded-full p-2"
-      >
-        <img src={`${import.meta.env.BASE_URL}/image/back-button.png`} className="w-14 h-14 cursor-pointer" />
-      </button>
-
-      <div className="bg-purple-200 p-8 rounded-2xl shadow-lg w-200">
-        <h1 className="text-black text-xl font-[Mali] mb-4">ข้อตกลงในการใช้ซอฟต์แวร์</h1>
-        <p className="text-gray-700 font-[Mali]">ซอฟต์แวร์นี้เป็นผลงานที่พัฒนาขึ้นโดย นายกันตินันท์ ขุนพิลึก นายพชรพล พินิจกิจ และ นางสาวมนัสนันท์ ปานประเสริฐ จากโรงเรียนราชวินิตบางแก้ว ภายใต้การดูแลของนางสาว วนิดา มุสิแก้ว ภายใต้โครงการ CyberSmart ซึ่งได้รับการสนับสนุนโดยสำนักงานพัฒนาวิทยาศาสตร์และเทคโนโลยีแห่งชาติ (สวทช.)
->>>>>>> b854e60fb1a391c06bd101358541288a1b7e0f3f
 
 โดยมีวัตถุประสงค์เพื่อส่งเสริมให้นักเรียนและนักศึกษาได้เรียนรู้และฝึกทักษะในการพัฒนาซอฟต์แวร์ ทั้งนี้ ลิขสิทธิ์ของซอฟต์แวร์นี้เป็นของผู้พัฒนา ซึ่งผู้พัฒนาได้อนุญาตให้สำนักงานพัฒนาวิทยาศาสตร์และเทคโนโลยีแห่งชาติเผยแพร่ซอฟต์แวร์นี้ในรูปแบบ “ต้นฉบับ” โดยไม่มีการแก้ไขดัดแปลงใด ๆ ทั้งสิ้น ให้บุคคลทั่วไปสามารถนำไปใช้เพื่อประโยชน์ส่วนบุคคลหรือประโยชน์ทางการศึกษา ที่ไม่มีวัตถุประสงค์ในเชิงพาณิชย์ โดยไม่คิดค่าตอบแทนการใช้ซอฟต์แวร์ดังกล่าว
 

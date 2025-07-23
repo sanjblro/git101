@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import './App.css'
-import { HashRouter, NavLink, Routes, Route } from 'react-router-dom';
+import { BrowserRouter , NavLink, Routes ,Route} from 'react-router-dom'
+
 import routes from './routes'
 
 function App() {
@@ -9,13 +10,13 @@ function App() {
 
   return (
     <>
-   <HashRouter>
+   <BrowserRouter>
       <Routes>
         {routes.map((route, index) => (
           <Route key={index} path={route.path} element={route.element} />
         ))}
       </Routes>
-  </HashRouter>
+    </BrowserRouter>
     </>
   )
 }

@@ -16,10 +16,10 @@ const rows = [
   return (
    <div className="text-center p-10 bg-cover bg-center min-h-screen"
    style={{
-    backgroundImage: `${import.meta.env.BASE_URL}image/brett-ritchie-1vKTnwLMdqs-unsplash.jpg`,
+    backgroundImage: "url('public/image/brett-ritchie-1vKTnwLMdqs-unsplash.jpg')",
   }}
    >
-      <h2 className='text-2xl text-black font-[Mali] mb-8 mt-10'>Cyber Smart</h2>
+      <h2 className='text-2xl text-white font-[Mali] mb-8 mt-10'>เส้นทางแห่งดวงจันทร์</h2>
 {rows.map((row, rowIndex) => (
         <div key={rowIndex} className="relative flex justify-center gap-50 mb-8 pt-20">
           {row.map((stageNumber, i) => (

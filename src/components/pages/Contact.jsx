@@ -13,7 +13,7 @@ const Setting = () => {
         onClick={() => navigate(-1)}
         className="absolute top-20 left-50 rounded-full p-2"
       >
-        <img src={`${import.meta.env.BASE_URL}/image/back-button.png`} className="w-14 h-14 cursor-pointer" />
+        <img src="/image/back-button.png" className="w-14 h-14 cursor-pointer" />
       </button>
 
       <div className="top-20 text-6xl font-[Mali] absolute">
@@ -21,7 +21,7 @@ const Setting = () => {
       </div>
 
       <div className="flex items-center w-full max-w-md mt-20 ">
-        <img src={`${import.meta.env.BASE_URL}/image/sound.png`}  alt="volume" className="w-8 h-8 mr-4" />
+        <img src="/image/sound.png" alt="volume" className="w-8 h-8 mr-4" />
         <input
           type="range"
           min="0"
