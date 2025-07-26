@@ -48,10 +48,10 @@ function Story() {
 
   return (
     <div className="text-center p-10 bg-yellow-100 bg-cover bg-center min-h-screen font-[Mali]">
-      <h2 className="text-4xl text-black mb-8 mt-10">Cyber Smart</h2>
+      <h2 className="text-4xl text-black mb-5 mt-10">Cyber Smart</h2>
 
       {desktopRows.map((row, rowIndex) => (
-        <div key={rowIndex} className="relative flex justify-center gap-60 mb-40 pt-30">
+        <div key={rowIndex} className="relative flex justify-center gap-50 mb-20 pt-30">
           {row.map((stageNumber) => (
             <div key={stageNumber} className="relative">
               <button

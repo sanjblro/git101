@@ -15,7 +15,7 @@ function About() {
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen font-[Mali]">
-      <p className="mb-4 text-4xl">How old are you?</p>
+      <p className="mb-4 text-4xl">กรุณาใส่อายุของคุณ</p>
 
       <input  
         type="number"

@@ -19,7 +19,7 @@ const Home = () => {
 
 
         <div className="space-y-4 w-full max-w-sm">
-          <Link to="/about" className="bg-gray-600 rounded-full py-3 mb-5 font-[Mali] text-white text-center block">
+          <Link to="/name" className="bg-gray-600 rounded-full py-3 mb-5 font-[Mali] text-white text-center block">
             START
           </Link>
           <Link to="/contact" className="bg-gray-600 rounded-full py-3 mb-5 font-[Mali] text-white text-center block">
@@ -42,7 +42,7 @@ const Home = () => {
       <img src={`${import.meta.env.BASE_URL}image/phone.PNG`} alt="phone" className='absolute w-270 z-0 bottom-0 left-1/3' />
 
       <Link
-        to="/about"
+        to="/name"
         className="w-100 h-auto bg-gray-600 rounded-full p-6 ml-50 mb-3 font-[Mali] text-white text-center block"
       >
         START

@@ -5,12 +5,14 @@ import Story from "./components/pages/Story";
 import State1 from "./components/States/State1";
 import License from "./components/pages/License";
 import StatePage from "./components/StatePage";
+import Name from "./components/pages/Name";
 
 import Error from "./components/pages/Error";
 
 
 const routes = [
   { path: '/', element: <Home /> },
+  { path: '/name', element: <Name /> },
   { path: '/about', element: <About /> },
   { path: '/license', element: <License /> },
   { path: '/contact', element: <Contact /> },
