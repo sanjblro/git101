@@ -10,6 +10,7 @@ function Name() {
     e.preventDefault();
 
   if (name.trim() !== '') {
+      localStorage.setItem('name', name); 
     navigate('/about');
   } else {
     alert('กรุณากรอกชื่อของคุณ');
@@ -27,7 +28,7 @@ function Name() {
           placeholder="ใส่ชื่อของคุณ"
           className='font-[Mali] mr-5'
         />
-        <button type="submit" className='font-[Mali] p-2 border w-30 rounded-full bg-purple-200'>บันทึก</button>
+        <button type="submit" className='font-[Mali] p-2 border w-30 rounded-full bg-purple-200'>ต่อไป</button>
       </form>
     </div>
       

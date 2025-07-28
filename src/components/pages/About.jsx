@@ -7,7 +7,7 @@ function About() {
 
   const handleSubmit = () => {
     if (age) {
-      navigate('/story');
+      navigate('/hello');
     } else {
       alert('Please enter your age!');
     }
@@ -28,7 +28,7 @@ function About() {
         onClick={handleSubmit}
         className="p-2 border w-40 rounded-full text-center mt-5 bg-purple-200"
       >
-        NEXT
+        ต่อไป
       </button>
     </div>
   );
