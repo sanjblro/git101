@@ -7,7 +7,7 @@ function Story() {
   const isMobile414 = useMediaQuery({ maxWidth: 414, maxHeight: 896 });
 
   const handleStageClick = (stageNumber) => {
-    navigate(`/stage/${stageNumber}`);
+    navigate(`/stagedark/${stageNumber}`);
   };
 
 
