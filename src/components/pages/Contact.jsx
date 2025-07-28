@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useMediaQuery } from 'react-responsive';
 
 const Setting = () => {
@@ -77,12 +77,12 @@ const Setting = () => {
   return (
     <div className="relative w-full bg-yellow-100 flex flex-col items-center justify-center min-h-screen font-[Mali]">
 
-      <button
-        onClick={() => navigate(-1)}
+      <Link
+        to="/"
         className="absolute top-20 left-50 rounded-full p-2"
       >
         <img src={`${import.meta.env.BASE_URL}/image/back-button.png`} className="w-14 h-14 cursor-pointer" />
-      </button>
+      </Link>
 
       <div className="top-20 text-6xl font-[Mali] absolute">
         SETTING
@@ -126,12 +126,16 @@ const Setting = () => {
       )}
 
       <div className="flex gap-10 mt-20">
-        <button className="bg-sky-700 rounded-full w-80 h-20 text-white text-4xl cursor-pointer">
+        <Link
+        to="/contactdark"
+        className="bg-sky-700 rounded-full px-20 py-5 text-black text-4xl cursor-pointer">
           DARK MODE
-        </button>
-        <button className="bg-yellow-200 rounded-full px-20 py-5 text-black text-4xl cursor-pointer">
+        </Link>
+        <Link
+        to="/contact"
+        className="bg-yellow-200 rounded-full px-20 py-5 text-black text-4xl cursor-pointer">
           LIGHT MODE
-        </button>
+        </Link>
       </div>
     </div>
   );

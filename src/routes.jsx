@@ -8,6 +8,14 @@ import StatePage from "./components/StatePage";
 import Name from "./components/pages/Name";
 import Hello from "./components/pages/Hello";
 
+//dark
+import Homedard from "./components/darkpages/Homedard";
+import Aboutdark from "./components/darkpages/Aboutdark";
+import Contactdark from "./components/darkpages/Contactdark";
+import Licensedark from "./components/darkpages/Licensedark";
+import Namedark from "./components/darkpages/Namedark";
+import Hellodark from "./components/darkpages/Hellodark";
+
 import Error from "./components/pages/Error";
 
 const routes = [
@@ -21,6 +29,13 @@ const routes = [
   { path: '/state1', element: <State1 /> },
   { path: '/stage/:stageNumber', element: <StatePage /> },
   { path: '/*', element: <Error /> },
+
+  { path: '/homedark', element: <Homedard /> },
+  { path: '/aboutdark', element: <Aboutdark /> },
+  { path: '/contactdark', element: <Contactdark /> },
+  { path: '/licensedark', element: <Licensedark /> },
+  { path: '/namedark', element: <Namedark /> },
+  { path: '/hellodark', element: <Hellodark /> },
 ];
 
 export default routes;
