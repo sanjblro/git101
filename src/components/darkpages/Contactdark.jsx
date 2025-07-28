@@ -13,7 +13,7 @@ const Contactdark = () => {
   
    if (isMobile414) {
      return (
-       <div className="relative w-full bg-yellow-100 flex flex-col items-center justify-center min-h-screen pt-10 px-4 font-[Mali]">
+       <div className="relative w-full bg-blue-100 flex flex-col items-center justify-center min-h-screen pt-10 px-4 font-[Mali]">
  
          <button onClick={() => navigate(-1)} className="absolute top-4 left-4">
            <img src={`${import.meta.env.BASE_URL}/image/back-button.png`} className="w-10 h-10" />

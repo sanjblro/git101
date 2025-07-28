@@ -32,15 +32,9 @@ function Licensedark() {
    return (
      <div className="flex items-center justify-center min-h-screen bg-blue-100 relative font-[Mali]">
  
-       <button
-         onClick={() => navigate('/')}
-         className="absolute top-20 left-50 rounded-full p-2"
-       >
-         <img
-           src={`${import.meta.env.BASE_URL}/image/back-button.png`}
-           className="w-14 h-14 cursor-pointer"
-         />
-       </button>
+       <button onClick={() => navigate(-1)} className="absolute top-4 left-4">
+           <img src={`${import.meta.env.BASE_URL}/image/back-button.png`} className="w-10 h-10" />
+         </button>
  
        <div className="bg-purple-200 p-8 rounded-2xl shadow-lg w-[800px]">
          <h1 className="text-black text-xl mb-4">ข้อตกลงในการใช้ซอฟต์แวร์</h1>

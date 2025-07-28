@@ -15,6 +15,8 @@ import Contactdark from "./components/darkpages/Contactdark";
 import Licensedark from "./components/darkpages/Licensedark";
 import Namedark from "./components/darkpages/Namedark";
 import Hellodark from "./components/darkpages/Hellodark";
+import Storydark from "./components/darkpages/Storydark";
+import StatePagedark from "./components/StatePagedark";
 
 import Error from "./components/pages/Error";
 
@@ -36,6 +38,7 @@ const routes = [
   { path: '/licensedark', element: <Licensedark /> },
   { path: '/namedark', element: <Namedark /> },
   { path: '/hellodark', element: <Hellodark /> },
+  { path: '/storydark', element: <Storydark /> },
 ];
 
 export default routes;
