@@ -25,7 +25,7 @@ function Namedark() {
            value={name}
            onChange={(e) => setName(e.target.value)}
            placeholder="ใส่ชื่อของคุณ"
-           className='font-[Mali] mr-5'
+           className='p-2 border border-black rounded-full w-60 text-center font-[Mali] mr-5'
          />
          <button type="submit" className='font-[Mali] p-2 border w-30 rounded-full bg-purple-200'>ต่อไป</button>
        </form>

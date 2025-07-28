@@ -4,7 +4,7 @@ export const AudioContext = createContext();
 
 export const AudioProvider = ({ children }) => {
   const audioRef = useRef(null);
-  const [volume, setVolume] = useState(0.2);
+  const [volume, setVolume] = useState(0.12);
 
   useEffect(() => {
     if (audioRef.current) audioRef.current.volume = volume;
@@ -17,7 +17,11 @@ export const AudioProvider = ({ children }) => {
         src={`${import.meta.env.BASE_URL}abc.mp3`}
         loop
         autoPlay
-      />
+        muted
+        onCanPlay={() => {
+        audioRef.current.muted = false;
+      }}
+/>
       {children}
     </AudioContext.Provider>
   );

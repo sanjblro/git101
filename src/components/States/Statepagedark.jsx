@@ -267,7 +267,7 @@ const { stageNumber } = useParams();
   }
 
   return (
-    <div className="text-center font-[Mali] bg-blue-100 min-h-screen">
+    <div className="text-center font-[Mali] bg-blue-100 min-h-screen px-10 py-10">
       <h1 className="text-3xl font-bold text-sky-700 mb-4 mt-10">{stage.title}</h1>
       <p className="text-lg text-gray-800 mt-10">{stage.content}</p>
 
