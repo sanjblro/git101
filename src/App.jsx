@@ -1,23 +1,32 @@
-import { useState } from 'react'
-import './App.css'
-import { HashRouter, NavLink, Routes, Route } from 'react-router-dom';
-import routes from './routes'
+import { useState } from 'react';
+import './App.css';
+import { HashRouter, Routes, Route, useLocation } from 'react-router-dom';
+import routes from './routes';
+import { AnimatePresence } from 'framer-motion';
 
-function App() {
-  const [count, setCount] = useState(0)
+import { useEffect } from 'react';
+import { useLayoutEffect } from 'react';
 
+function AppWrapper() {
+  const location = useLocation();
 
   return (
-    <>
-   <HashRouter>
-      <Routes>
+    <AnimatePresence mode="wait">
+      <Routes location={location} key={location.pathname}>
         {routes.map((route, index) => (
           <Route key={index} path={route.path} element={route.element} />
         ))}
       </Routes>
-  </HashRouter>
-    </>
-  )
+    </AnimatePresence>
+  );
 }
 
-export default App
+function App() {
+  return (
+    <HashRouter>
+      <AppWrapper />
+    </HashRouter>
+  );
+}
+
+export default App;
