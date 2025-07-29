@@ -1,9 +1,17 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useMediaQuery } from 'react-responsive';
+import { useTranslation } from 'react-i18next';
 
 
 const Homedard = () => {
+
+    const { t, i18n } = useTranslation();
+  
+    const changeLanguage = (lng) => {
+      i18n.changeLanguage(lng);
+      setIsLanguageModalOpen(false);
+    };
 
 const isMobile414 = useMediaQuery({ maxWidth: 414, maxHeight: 896 });
 
@@ -21,13 +29,13 @@ const isMobile414 = useMediaQuery({ maxWidth: 414, maxHeight: 896 });
 
         <div className="space-y-4 w-full max-w-sm">
           <Link to="/name" className="bg-gray-600 rounded-full py-3 mb-5 font-[Mali] text-white text-center block">
-            START
+            {t('start')}
           </Link>
           <Link to="/contact" className="bg-gray-600 rounded-full py-3 mb-5 font-[Mali] text-white text-center block">
-            SETTING
+            {t('setting')}
           </Link>
           <Link to="/license" className="bg-gray-600 rounded-full py-3 font-[Mali] text-white text-center block">
-            LICENSE
+            {t('license')}
           </Link>
         </div>
 
@@ -46,21 +54,21 @@ const isMobile414 = useMediaQuery({ maxWidth: 414, maxHeight: 896 });
         to="/namedark"
         className="w-100 h-auto bg-gray-600 rounded-full p-6 ml-50 mb-3 font-[Mali] text-white text-center block"
       >
-        START
+        {t('start')}
       </Link>
 
       <Link
         to="/contactdark"
         className="w-100 h-auto bg-gray-600 rounded-full p-6 ml-50 mb-3 font-[Mali] text-white text-center block"
       >
-        SETTING
+        {t('setting')}
       </Link>
 
       <Link
         to="/licensedark"
         className="w-100 h-auto bg-gray-600 rounded-full p-6 ml-50 mb-3 font-[Mali] text-white text-center block"
       >
-        LICENSE
+        {t('license')}
       </Link>
     </div>
   );
