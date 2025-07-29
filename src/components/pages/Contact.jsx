@@ -79,7 +79,7 @@ const Setting = () => {
   }
 
   return (
-    <div className="relative w-full bg-yellow-100 flex flex-col items-center justify-center min-h-screen font-[Mali]">
+    <div className="relative w-full bg-gradient-to-r from-amber-200 via-yellow-100 to-red-200 flex-col items-center justify-center min-h-screen font-[Mali]">
       <Link to="/" className="absolute top-20 left-50 rounded-full p-2">
         <img src={`${import.meta.env.BASE_URL}/image/back-button.png`} className="w-14 h-14 cursor-pointer" />
       </Link>

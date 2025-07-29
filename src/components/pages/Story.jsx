@@ -47,7 +47,7 @@ function Story() {
 
 
   return (
-    <div className="text-center p-10 bg-yellow-100 bg-cover bg-center min-h-screen font-[Mali]">
+    <div className="text-center p-10 bg-gradient-to-r from-amber-200 via-yellow-100 to-red-200 bg-cover bg-center min-h-screen font-[Mali]">
       <h2 className="text-4xl text-black mb-5 mt-10">Cyber Smart</h2>
 
       {desktopRows.map((row, rowIndex) => (

@@ -21,7 +21,7 @@ function About() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen font-[Mali]">
+    <div className="bg-gradient-to-r from-amber-200 via-yellow-100 to-red-200 flex flex-col items-center justify-center min-h-screen font-[Mali]">
       <p className="mb-4 text-4xl">{t('petye')}</p>
 
       <input  

@@ -24,7 +24,7 @@ function Name() {
   }
   };
   return (
-    <div className='h-screen flex justify-center items-center'>
+    <div className='h-screen flex justify-center items-center bg-gradient-to-r from-amber-200 via-yellow-100 to-red-200'>
        <div className='w-full max-w-md text-center'>
       <h2 className='font-[Mali] text-3xl mb-10'>{t('petyn')}</h2>
       <form onSubmit={handleSubmit}>
