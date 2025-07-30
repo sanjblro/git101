@@ -266,7 +266,7 @@ function StatePage() {
   }
 
   return (
-    <div className="text-center font-[Mali] bg-gradient-to-r from-amber-200 via-yellow-100 to-red-200">
+    <div className="text-center font-[Mali] bg-gradient-to-r from-amber-200 via-yellow-100 to-red-200 px-10 py-10 min-h-screen">
       <h1 className="text-3xl font-bold text-sky-700 mb-4 mt-10">{stage.title}</h1>
       <p className="text-lg text-gray-800 mt-10">{stage.content}</p>
 
