@@ -1,6 +1,8 @@
-import React from "react";
-import { Link, useParams } from "react-router-dom";
+import React, { useState } from "react";
+import { Link, useParams, useNavigate } from "react-router-dom";
 import { useMediaQuery } from "react-responsive";
+
+
 
 const stageData = {
   "1": {
@@ -221,8 +223,24 @@ const stageData = {
 };
 
 function StatePage() {
-  const { stageNumber } = useParams();
-  const stage = stageData[stageNumber];
+ const { stageNumber } = useParams();
+ const stage = stageData[stageNumber];
+ const [score, setScore] = useState(() => parseInt(localStorage.getItem("score")) || 0);
+ const navigate = useNavigate();
+
+ const bgColor = stageNumber.startsWith("correct")
+    ? "bg-green-200"
+    : stageNumber.startsWith("wrong")
+    ? "bg-red-200"
+    : "bg-yellow-100";
+
+    const textColor = stageNumber.startsWith("correct")
+    ? "text-green-800"
+    : stageNumber.startsWith("wrong")
+    ? "text-red-800"
+    : "text-gray-800";
+
+
 
   const isMobile = useMediaQuery({ maxWidth: 414, maxHeight: 896 });
 
@@ -232,6 +250,20 @@ function StatePage() {
         ไม่พบตอนนี้
       </div>
     );
+  }
+
+  function handleFinish() {
+
+    if (stageNumber.startsWith("correct")) {
+      setScore(prev => prev + 10);
+
+      localStorage.setItem("score", (parseInt(localStorage.getItem("score")) || 0) + 10);
+    } else {
+
+      localStorage.setItem("score", localStorage.getItem("score") || 0);
+    }
+
+    navigate("/Story");
   }
 
   if (isMobile) {
@@ -266,31 +298,47 @@ function StatePage() {
   }
 
   return (
-    <div className="text-center font-[Mali] bg-gradient-to-r from-amber-200 via-yellow-100 to-red-200">
-      <h1 className="text-3xl font-bold text-sky-700 mb-4 mt-10">{stage.title}</h1>
-      <p className="text-lg text-gray-800 mt-10">{stage.content}</p>
+      <div className={`min-h-screen px-6 py-10 font-[Mali] text-center ${bgColor}`}>
+     <h1 className={`text-3xl lg:text-4xl font-bold mb-4 mt-10 ${textColor}`}>
+  {stage.title}
+</h1>
 
-      <div className="flex items-start mt-10 gap-5 flex-wrap">
+<p className={`text-lg mt-10 leading-relaxed ${textColor}`}>
+  {stage.content}
+</p>
+
+
+      <div className="flex flex-col lg:flex-row items-center justify-center mt-10 gap-6 flex-wrap">
         {stage.Image && (
           <img
             src={stage.Image}
             alt="ภาพประกอบ"
-            className="mt-6 w-220 h-auto"
+            className="w-full max-w-xs rounded-lg shadow-md"
           />
         )}
 
-        <div className="space-y-5 text-center text-top py-50 px-30">
-          {stage.choices?.map((choice, index) => (
-            <Link
-              key={index}
-              to={`/stage/${choice.next}`}
-              className="block bg-sky-800 hover:bg-sky-600 text-white py-2 px-4 rounded-md max-w-xs"
-            >
-              {choice.text}
-            </Link>
-          ))}
-        </div>
+        {stage.choices && (
+          <div className="space-y-5 text-center py-8 px-6 max-w-md w-full">
+            {stage.choices.map((choice, index) => (
+              <Link
+                key={index}
+                to={`/stage/${choice.next}`}
+                className="block bg-sky-800 hover:bg-sky-600 text-white py-3 px-5 rounded-md shadow-md transition duration-200"
+              >
+                {choice.text}
+              </Link>
+            ))}
+          </div>
+        )}
       </div>
+       {(stageNumber.startsWith("correct") || stageNumber.startsWith("wrong")) && (
+        <button
+          onClick={handleFinish}
+          className="mt-10 bg-indigo-600 hover:bg-indigo-500 text-white py-3 px-6 rounded-md shadow-lg transition duration-200"
+        >
+          เสร็จสิ้น
+        </button>
+      )}
     </div>
   );
 }

@@ -6,6 +6,7 @@ import License from "./components/pages/License";
 import StatePage from "./components/StatePage";
 import Name from "./components/pages/Name";
 import Hello from "./components/pages/Hello";
+import Cer from "./components/pages/Cer";
 
 import Homedard from "./components/darkpages/Homedard";
 import Aboutdark from "./components/darkpages/Aboutdark";
@@ -29,6 +30,7 @@ const routes = [
   { path: '/story', element: <PageWrapper><Story /></PageWrapper> },
   { path: '/stage/:stageNumber', element: <PageWrapper><StatePage /></PageWrapper> },
   { path: '/*', element: <PageWrapper><Error /></PageWrapper> },
+  { path: '/cer', element: <PageWrapper><Cer /></PageWrapper> },
 
   // Dark mode pages
   { path: '/homedark', element: <PageWrapper><Homedard /></PageWrapper> },
