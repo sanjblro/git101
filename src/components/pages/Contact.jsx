@@ -79,72 +79,72 @@ const Setting = () => {
   }
 
   return (
-    <div className="relative w-full bg-gradient-to-r from-amber-200 via-yellow-100 to-red-200 flex-col items-center justify-center min-h-screen font-[Mali]">
-      <Link to="/" className="absolute top-20 left-50 rounded-full p-2">
-        <img src={`${import.meta.env.BASE_URL}/image/back-button.png`} className="w-14 h-14 cursor-pointer" />
-      </Link>
-
-      <div className="top-20 text-6xl font-[Mali] absolute">{t('setting')}</div>
-
-      <div className="flex items-center w-full max-w-md mt-20">
-        <img src={`${import.meta.env.BASE_URL}/image/sound.png`} alt="volume" className="w-8 h-8 mr-4" />
-        <input
-          type="range"
-          min="0"
-          max="100"
-          value={volume * 100}
-          onChange={handleVolumeChange}
-          className="w-full accent-black cursor-pointer"
-        />
-      </div>
-
-      <button
-        className="bg-gray-600 rounded-full w-80 h-20 text-white text-4xl mt-20 cursor-pointer"
-        onClick={() => setIsLanguageModalOpen(true)}
-      >
-        {t('language')}
-      </button>
-
-      {isLanguageModalOpen && (
-        <div className="fixed inset-0 bg-opacity-50 flex items-center justify-center z-50">
-          <div className="bg-gray-200 p-10 rounded-xl shadow-lg w-96 text-center relative">
-            <h2 className="text-2xl font-bold mb-4">Change language</h2>
-            <button
-              className="absolute top-2 right-4 text-xl text-gray-600 hover:text-black cursor-pointer"
-              onClick={() => setIsLanguageModalOpen(false)}
-            >
-              ✕
-            </button>
-            <div className="space-y-4 mt-4">
-              <button 
-                className="w-full py-2 bg-sky-700 text-white rounded cursor-pointer"
-                onClick={() => changeLanguage('th')}
-                >ไทย</button>
-              <button 
-                className="w-full py-2 bg-sky-700 text-white rounded cursor-pointer"
-                onClick={() => changeLanguage('en')}
-                >English</button>
-            </div>
-          </div>
-        </div>
-      )}
-
-      <div className="flex gap-10 mt-20">
-        <Link
-          to="/contactdark"
-          className="bg-sky-700 rounded-full px-20 py-5 text-black text-4xl cursor-pointer"
-        >
-          {t('dark_mode')}
-        </Link>
-        <Link
-          to="/contact"
-          className="bg-yellow-200 rounded-full px-20 py-5 text-black text-4xl cursor-pointer"
-        >
-          {t('light_mode')}
-        </Link>
-      </div>
-    </div>
-  );
+   <div className="relative w-full  bg-gradient-to-r from-amber-200 via-yellow-100 to-red-200 flex flex-col items-center justify-center min-h-screen font-[Mali]">
+         <Link to="/homedark" className="absolute top-20 left-50 rounded-full p-2">
+           <img src={`${import.meta.env.BASE_URL}/image/back-button.png`} className="w-14 h-14 cursor-pointer" />
+         </Link>
+   
+         <div className="top-20 text-6xl font-[Mali] absolute">{t('setting')}</div>
+   
+         <div className="flex items-center w-full max-w-md mt-20">
+           <img src={`${import.meta.env.BASE_URL}/image/sound.png`} alt="volume" className="w-8 h-8 mr-4" />
+           <input
+             type="range"
+             min="0"
+             max="100"
+             value={volume * 100}
+             onChange={handleVolumeChange}
+             className="w-full accent-black cursor-pointer"
+           />
+         </div>
+   
+         <button
+           className="bg-gray-600 rounded-full w-80 h-20 text-white text-4xl mt-20 cursor-pointer"
+           onClick={() => setIsLanguageModalOpen(true)}
+         >
+           {t('language')}
+         </button>
+   
+         {isLanguageModalOpen && (
+           <div className="fixed inset-0 bg-opacity-50 flex items-center justify-center z-50">
+             <div className="bg-gray-200 p-10 rounded-xl shadow-lg w-96 text-center relative">
+               <h2 className="text-2xl font-bold mb-4">Change language</h2>
+               <button
+                 className="absolute top-2 right-4 text-xl text-gray-600 hover:text-black cursor-pointer"
+                 onClick={() => setIsLanguageModalOpen(false)}
+               >
+                 ✕
+               </button>
+               <div className="space-y-4 mt-4">
+                 <button 
+                   className="w-full py-2 bg-sky-700 text-white rounded cursor-pointer"
+                   onClick={() => changeLanguage('th')}
+                   >ไทย</button>
+                 <button 
+                   className="w-full py-2 bg-sky-700 text-white rounded cursor-pointer"
+                   onClick={() => changeLanguage('en')}
+                   >English</button>
+               </div>
+             </div>
+           </div>
+         )}
+   
+         <div className="flex gap-10 mt-20">
+           <Link
+             to="/contactdark"
+             className="bg-sky-700 rounded-full px-20 py-5 text-black text-4xl cursor-pointer"
+           >
+             {t('dark_mode')}
+           </Link>
+           <Link
+             to="/contact"
+             className="bg-yellow-200 rounded-full px-20 py-5 text-black text-4xl cursor-pointer"
+           >
+             {t('light_mode')}
+           </Link>
+         </div>
+       </div>
+     );
 };
 
 export default Setting;
