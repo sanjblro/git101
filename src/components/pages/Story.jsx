@@ -9,13 +9,27 @@ function Story() {
    const [score, setScore] = useState(0);
   const [showRewardButton, setShowRewardButton] = useState(false);
 
-  useEffect(() => {
-    const savedScore = parseInt(localStorage.getItem("score")) || 0;
-    setScore(savedScore);
-    if (savedScore >= 50) {
-      setShowRewardButton(true);
-    }
-  }, []);
+ useEffect(() => {
+  const rawScore = localStorage.getItem("score");
+  const parsed = rawScore !== null && !isNaN(parseInt(rawScore)) ? parseInt(rawScore) : 0;
+
+  console.log("Raw score:", rawScore);
+  console.log("Parsed score:", parsed);
+
+  setScore(parsed);
+  setShowRewardButton(parsed >= 50);
+}, []);
+useEffect(() => {
+  const rawScore = localStorage.getItem("score");
+  const parsed = rawScore !== null && !isNaN(parseInt(rawScore)) ? parseInt(rawScore) : 0;
+
+  console.log("Raw score:", rawScore);
+  console.log("Parsed score:", parsed);
+
+  setScore(parsed);
+  setShowRewardButton(parsed >= 50);
+}, []);
+
 
   const handleStageClick = (stageNumber) => {
     navigate(`/stage/${stageNumber}`);
@@ -96,13 +110,24 @@ function Story() {
         ))
       )}
       {showRewardButton && (
-        <button
-          onClick={handleRewardClick}
-          className="fixed bottom-8 right-8 bg-green-600 hover:bg-green-500 text-white py-3 px-6 rounded-full shadow-lg transition duration-200"
-        >
-          รับรางวัล 🎉
-        </button>
-      )}
+  <button
+    onClick={handleRewardClick}
+    className="fixed bottom-8 right-8 bg-green-600 hover:bg-green-500 text-white py-3 px-6 rounded-full shadow-lg transition duration-200"
+  >
+    รับรางวัล 🎉
+  </button>
+)}
+  <button
+  onClick={() => {
+    localStorage.setItem("score", "0");
+    setScore(0);
+    setShowRewardButton(false);
+  }}
+  className="fixed bottom-8 left-8 bg-red-400 hover:bg-red-500 text-white py-3 px-6 rounded-full rounded-full shadow-lg transition duration-200"
+>
+  เริ่มใหม่
+</button>
+
     </div>
   );
 }

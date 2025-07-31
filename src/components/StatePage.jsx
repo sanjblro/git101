@@ -252,19 +252,18 @@ function StatePage() {
     );
   }
 
-  function handleFinish() {
+function handleFinish() {
+  const currentScore = parseInt(localStorage.getItem("score")) || 0;
+  let newScore = currentScore;
 
-    if (stageNumber.startsWith("correct")) {
-      setScore(prev => prev + 10);
-
-      localStorage.setItem("score", (parseInt(localStorage.getItem("score")) || 0) + 10);
-    } else {
-
-      localStorage.setItem("score", localStorage.getItem("score") || 0);
-    }
-
-    navigate("/Story");
+  if (stageNumber.startsWith("correct")) {
+    newScore += 10;
+    setScore(newScore);
+    localStorage.setItem("score", newScore);
   }
+
+  navigate("/Story");
+}
 
   if (isMobile) {
     return (
