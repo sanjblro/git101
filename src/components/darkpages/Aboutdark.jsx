@@ -21,7 +21,7 @@ function Aboutdark() {
    };
  
    return (
-     <div className="flex flex-col items-center justify-center min-h-screen font-[Mali] bg-blue-100">
+     <div className="flex flex-col items-center justify-center min-h-screen font-[Mali] bg-gradient-to-r from-indigo-950 via-indigo-800 to-sky-700">
        <p className="mb-4 text-4xl">{t('petye')}</p>
  
        <input  

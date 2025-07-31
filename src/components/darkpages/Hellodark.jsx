@@ -13,8 +13,8 @@ function Hellodark() {
   };
 
    return (
-     <div className='flex flex-col items-center justify-center min-h-screen font-[Mali] bg-blue-100'>
-      <h1 className='mb-4 text-4xl'>{t('hello',{ name })}</h1>
+     <div className='flex flex-col items-center justify-center min-h-screen font-[Mali] bg-gradient-to-r from-indigo-950 via-indigo-800 to-sky-700'>
+      <h1 className='mb-4 text-4xl'>{t('สวัสดี',{ name })}</h1>
        <Link to="/storydark" className="bg-gray-600 rounded-full py-3 px-10 mt-10 mb-5 font-[Mali] text-white text-center block">
                   {t('next')}
                  </Link>

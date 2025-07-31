@@ -22,7 +22,7 @@ const Setting = () => {
 
   if (isMobile414) {
     return (
-      <div className="relative w-full bg-blue-100 flex flex-col items-center justify-center min-h-screen pt-10 px-4 font-[Mali]">
+      <div className="relative w-full bg-gradient-to-r from-indigo-950 via-indigo-800 to-sky-700 flex flex-col items-center justify-center min-h-screen pt-10 px-4 font-[Mali]">
         <button onClick={() => navigate(-1)} className="absolute top-4 left-4">
           <img src={`${import.meta.env.BASE_URL}/image/back-button.png`} className="w-10 h-10" />
         </button>
@@ -85,7 +85,7 @@ const Setting = () => {
   }
 
   return (
-    <div className="relative w-full bg-blue-100 flex flex-col items-center justify-center min-h-screen font-[Mali]">
+    <div className="relative w-full bg-gradient-to-r from-indigo-950 via-indigo-800 to-sky-700 flex flex-col items-center justify-center min-h-screen font-[Mali]">
       <Link to="/homedark" className="absolute top-20 left-50 rounded-full p-2">
         <img src={`${import.meta.env.BASE_URL}/image/back-button.png`} className="w-14 h-14 cursor-pointer" />
       </Link>

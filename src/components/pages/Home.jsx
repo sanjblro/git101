@@ -46,7 +46,7 @@ const Home = () => {
   return (
     <div className="relative min-h-screen w-full bg-gradient-to-r from-amber-200 via-yellow-100 to-red-200 flex flex-col text-black fixed">
       <img src={`${import.meta.env.BASE_URL}image/logo.PNG`} alt="logo" className="w-200 h-auto relative z-10 mb-6" />
-      <img src={`${import.meta.env.BASE_URL}image/phone.PNG`} alt="phone" className='absolute w-270 z-0 bottom-0 left-1/3' />
+      <img src={`${import.meta.env.BASE_URL}image/phone.PNG`} alt="phone" className='absolute w-270 z-0 bottom-0 left-1/3 ' />
 
       <Link
         to="/name"

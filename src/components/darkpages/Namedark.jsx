@@ -23,7 +23,7 @@ function Namedark() {
    }
    };
    return (
-     <div className='h-screen flex justify-center items-center bg-blue-100'>
+     <div className='h-screen flex justify-center items-center bg-gradient-to-r from-indigo-950 via-indigo-800 to-sky-700'>
         <div className='w-full max-w-md text-center'>
        <h2 className='font-[Mali] text-3xl mb-10'>{t('petyn')}</h2>
        <form onSubmit={handleSubmit}>

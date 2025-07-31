@@ -18,7 +18,7 @@ const isMobile414 = useMediaQuery({ maxWidth: 414, maxHeight: 896 });
   if (isMobile414) {
 
     return (
-      <div className="min-h-screen bg-blue-100 flex flex-col items-center justify-center text-black px-6 pt-8">
+      <div className="min-h-screen bg-gradient-to-r from-indigo-950 via-indigo-800 to-sky-700 flex flex-col items-center justify-center text-black px-6 pt-8">
 
         <img
           src={`${import.meta.env.BASE_URL}image/logo.PNG`}
@@ -46,7 +46,7 @@ const isMobile414 = useMediaQuery({ maxWidth: 414, maxHeight: 896 });
 
   
   return (
-    <div className="relative min-h-screen w-full bg-blue-100 flex flex-col text-black fixed">
+    <div className="relative min-h-screen w-full bg-gradient-to-r from-indigo-950 via-indigo-800 to-sky-700 flex flex-col text-black fixed">
       <img src={`${import.meta.env.BASE_URL}image/logo.PNG`} alt="logo" className="w-200 h-auto relative z-10 mb-6" />
       <img src={`${import.meta.env.BASE_URL}image/phone.PNG`} alt="phone" className='absolute w-270 z-0 bottom-0 left-1/3' />
 

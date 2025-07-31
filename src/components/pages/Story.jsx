@@ -76,7 +76,7 @@ useEffect(() => {
 
 
   return (
-     <div className={`text-center p-6 min-h-screen font-[Mali] bg-yellow-100 ${isMobile414 ? '' : 'bg-gradient-to-r from-amber-200 via-yellow-100 to-red-200 bg-cover bg-center'}`}>
+     <div className={`text-center p-6 min-h-screen font-[Mali] bg-gradient-to-r from-amber-200 via-yellow-100 to-red-200 bg-cover bg-center ${isMobile414 ? '' : 'bg-gradient-to-r from-amber-200 via-yellow-100 to-red-200 bg-cover bg-center'}`}>
       <h2 className={`text-3xl ${isMobile414 ? 'mb-6 mt-6' : 'text-4xl mb-5 mt-10 text-black'}`}>Cyber Smart</h2>
 
       {isMobile414 ? (
@@ -117,16 +117,7 @@ useEffect(() => {
     รับรางวัล 🎉
   </button>
 )}
-  <button
-  onClick={() => {
-    localStorage.setItem("score", "0");
-    setScore(0);
-    setShowRewardButton(false);
-  }}
-  className="fixed bottom-8 left-8 bg-red-400 hover:bg-red-500 text-white py-3 px-6 rounded-full rounded-full shadow-lg transition duration-200"
->
-  เริ่มใหม่
-</button>
+
 
     </div>
   );
