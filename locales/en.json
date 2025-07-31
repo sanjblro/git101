@@ -1,0 +1,270 @@
+{
+  "1": {
+    "title": "Episode 1",
+    "content": "You want to buy clothes from a Facebook shop offering lower-than-usual prices. The shop has no reviews but a lot of followers. The deal is made, and they sent you their bank account number. What will you do?",
+    "choices": [
+      {
+        "text": "Transfer money because the shop has many followers, seems trustworthy.",
+        "next": "wrong1"
+      },
+      {
+        "text": "Suspicious? Better check the account name on scam databases.",
+        "next": "correct1"
+      },
+      {
+        "text": "Don’t want to risk it, better ask for more seller credentials...",
+        "next": "correct1"
+      }
+    ]
+  },
+  "correct1": {
+    "title": "Great job",
+    "content": "You did the right thing. As a buyer, you have the right to verify before transferring. Well done — keep it up!"
+  },
+  "wrong1": {
+    "title": "Oh no...",
+    "content": "You encountered a giant dragon in a cave."
+  },
+  "2": {
+    "title": "Episode 2",
+    "content": "You use the same password for multiple websites for convenience. One site got hacked. What will you do?",
+    "choices": [
+      {
+        "text": "Ignore it because the other sites probably won't be affected.",
+        "next": "wrong2"
+      },
+      {
+        "text": "Change all passwords immediately and enable 2FA if possible.",
+        "next": "correct2"
+      },
+      {
+        "text": "Keep using the same password because it's easy to remember.",
+        "next": "wrong2"
+      }
+    ]
+  },
+  "correct2": {
+    "title": "Well done!",
+    "content": "Changing passwords and enabling 2FA is the safest way when accounts are at risk. You care about your data security — excellent!"
+  },
+  "wrong2": {
+    "title": "Oh no...",
+    "content": "Using repeated passwords or not changing them might lead to other accounts getting hacked. Be careful with your information!"
+  },
+  "3": {
+    "title": "Episode 3",
+    "content": "You receive an email that looks like it's from your bank saying your account is locked and asking you to click a link. What will you do?",
+    "Image": "${import.meta.env.BASE_URL}image/phoneprp.PNG",
+    "choices": [
+      {
+        "text": "Click the link immediately to unlock.",
+        "next": "wrong3"
+      },
+      {
+        "text": "Call the bank directly, don’t click anything.",
+        "next": "correct3"
+      },
+      {
+        "text": "Delete the email because it's not your bank.",
+        "next": "wrong3"
+      }
+    ]
+  },
+  "correct3": {
+    "title": "Correct!",
+    "content": "Never click on suspicious email links. Calling the bank or checking their official site is the safest option."
+  },
+  "wrong3": {
+    "title": "Not quite!",
+    "content": "Hackers often impersonate banks to steal your data. Clicking might lead to stolen passwords or money!"
+  },
+  "4": {
+    "title": "Episode 4",
+    "content": "You’re in a coffee shop and find a free Wi-Fi with no password. What will you do?",
+    "Image": "${import.meta.env.BASE_URL}image/phoneprp.PNG",
+    "choices": [
+      {
+        "text": "Connect immediately and use social media as usual.",
+        "next": "wrong4"
+      },
+      {
+        "text": "Connect to Wi-Fi but use a VPN to protect your data.",
+        "next": "correct4"
+      },
+      {
+        "text": "Don’t connect because of fear of data interception.",
+        "next": "correct4"
+      }
+    ]
+  },
+  "correct4": {
+    "title": "Better safe than sorry!",
+    "content": "Avoiding insecure public Wi-Fi or using a VPN helps protect your personal data very well."
+  },
+  "wrong4": {
+    "title": "Too risky!",
+    "content": "Public Wi-Fi can be used to intercept data without your knowledge. Never use it for logins or important transactions!"
+  },
+  "5": {
+    "title": "Episode 5",
+    "content": "You're prompted to enable 2FA using an Authenticator app, but you're in a hurry. What will you do?",
+    "Image": "${import.meta.env.BASE_URL}image/phoneprp.PNG",
+    "choices": [
+      {
+        "text": "Skip for now, set it up later.",
+        "next": "correct5"
+      },
+      {
+        "text": "Enable 2FA right away for security.",
+        "next": "correct5"
+      },
+      {
+        "text": "Use SMS-based 2FA instead because it's easier.",
+        "next": "wrong5"
+      }
+    ]
+  },
+  "correct5": {
+    "title": "Great job!",
+    "content": "Enabling 2FA helps protect your account even if someone knows your password. You made the right choice!"
+  },
+  "wrong5": {
+    "title": "Oh no...",
+    "content": "Just a password isn’t enough nowadays! Make sure you have 2FA turned on for added security."
+  },
+  "6": {
+    "title": "Episode 6",
+    "content": "You found a free app offering tons of rewards but it requests access to files, photos, and SMS. What will you do?",
+    "Image": "${import.meta.env.BASE_URL}image/phoneprp.PNG",
+    "choices": [
+      {
+        "text": "Install it right away — who would pass up free stuff?",
+        "next": "wrong6"
+      },
+      {
+        "text": "Read reviews, install only if it's trustworthy.",
+        "next": "correct6"
+      },
+      {
+        "text": "Don’t install it because the permissions are excessive.",
+        "next": "correct6"
+      }
+    ]
+  },
+  "correct6": {
+    "title": "Smart move!",
+    "content": "Noticing apps requesting unnecessary permissions is a crucial skill. Avoid suspicious apps!"
+  },
+  "wrong6": {
+    "title": "Free but not safe!",
+    "content": "Apps asking for too many permissions may steal your data. Don’t fall for freebie traps!"
+  },
+  "7": {
+    "title": "Episode 7",
+    "content": "You receive an SMS saying 'You won an iPhone' with a link. What will you do?",
+    "Image": "${import.meta.env.BASE_URL}image/phoneprp.PNG",
+    "choices": [
+      {
+        "text": "Click it — maybe it’s real.",
+        "next": "wrong7"
+      },
+      {
+        "text": "Verify the source first.",
+        "next": "correct7"
+      },
+      {
+        "text": "Delete it right away because it looks like a scam.",
+        "next": "correct7"
+      }
+    ]
+  },
+  "correct7": {
+    "title": "Not fooled!",
+    "content": "You spotted a phishing attempt. Never click random links — great job!"
+  },
+  "wrong7": {
+    "title": "Nothing’s really free!",
+    "content": "Such links often steal personal info. Don’t risk your data for false hopes!"
+  },
+  "8": {
+    "title": "Episode 8",
+    "content": "A friend messages you urgently asking for money. It's the same account but with strange typos. What will you do?",
+    "Image": "${import.meta.env.BASE_URL}image/phoneprp.PNG",
+    "choices": [
+      {
+        "text": "Send the money immediately — it’s the same account.",
+        "next": "wrong8"
+      },
+      {
+        "text": "Don’t overthink it, maybe your friend really needs help.",
+        "next": "wrong8"
+      },
+      {
+        "text": "Call your friend every time to confirm.",
+        "next": "correct8"
+      }
+    ]
+  },
+  "correct8": {
+    "title": "Excellent!",
+    "content": "Beware of impersonation scams. Just because it’s your friend’s name doesn’t mean it’s really them. Always call to check!"
+  },
+  "wrong8": {
+    "title": "Too easy to trick!",
+    "content": "Your friend’s account might be hacked, and the message could be from a scammer. Don’t send money immediately!"
+  },
+  "9": {
+    "title": "Episode 9",
+    "content": "You find a USB flash drive in a parking lot and wonder who it belongs to. What will you do?",
+    "Image": "${import.meta.env.BASE_URL}image/phoneprp.PNG",
+    "choices": [
+      {
+        "text": "Give it to security or responsible staff.",
+        "next": "correct9"
+      },
+      {
+        "text": "Plug it into a friend’s computer just to be safe.",
+        "next": "wrong9"
+      },
+      {
+        "text": "Plug it into your computer to check the files immediately.",
+        "next": "wrong9"
+      }
+    ]
+  },
+  "correct9": {
+    "title": "Better safe than sorry!",
+    "content": "Unknown USB drives might contain viruses or malware. Give them to staff to handle safely."
+  },
+  "wrong9": {
+    "title": "Very dangerous!",
+    "content": "A random USB might be infected. Plugging it in could compromise your system instantly!"
+  },
+  "10": {
+    "title": "Episode 10",
+    "content": "You need to log in to your email on a public computer at an internet cafe. How can you stay safe?",
+    "Image": "${import.meta.env.BASE_URL}image/phoneprp.PNG",
+    "choices": [
+      {
+        "text": "Use incognito mode and always log out.",
+        "next": "wrong10"
+      },
+      {
+        "text": "Log in normally and log out properly afterward.",
+        "next": "wrong10"
+      },
+      {
+        "text": "Avoid logging in on public computers — too risky.",
+        "next": "correct10"
+      }
+    ]
+  },
+  "correct10": {
+    "title": "Smart choice!",
+    "content": "Avoiding logging in to important accounts on public computers greatly reduces the risk of data leakage!"
+  },
+  "wrong10": {
+    "title": "Watch out for keyloggers!",
+    "content": "Public computers might have password-stealing tools. Don’t take unnecessary risks!"
+  }
+}
